@@ -1,2 +1,3 @@
 # selenium-yatsenko
-infopulse selenium tets repo
+infopulse selenium test repo
+something added
