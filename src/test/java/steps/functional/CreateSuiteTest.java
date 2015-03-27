@@ -13,19 +13,20 @@ import testlink.steps.TestSteps;
 public class CreateSuiteTest extends TestSteps{
 
     @BeforeSuite
-    public void initEnv (){
+    public void initEnv()
+    {
         driver = new FirefoxDriver();
+    }
+
+    @Test
+    public void createSuite(){
+        Assert.assertTrue(login("admin","admin"), "Login failed");
+        Assert.assertTrue(createTestSuite(), "Suite creation failed");
     }
 
     @AfterSuite
     public void shutEnv(){
-        if (driver != null){
+        if (driver != null)
             driver.quit();
-        }
-    }
-
-    @Test
-    public void createSuite (){
-        Assert.assertTrue(login("admin", "admin"), "Login failed");
     }
 }
